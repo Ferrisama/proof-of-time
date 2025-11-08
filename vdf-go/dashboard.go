@@ -148,7 +148,7 @@ func handleVerifyCommand(filePath string, strict bool) {
 }
 
 func handleAnalyzeCommand(filePath string) {
-	fmt.Println("📊 Proof Analysis")
+	fmt.Println(" Proof Analysis")
 	fmt.Println("=================")
 	fmt.Println()
 
@@ -194,18 +194,18 @@ EXAMPLES:
 }
 
 func runBenchmarkDashboard() {
-	fmt.Println("📊 Proof of Time - Benchmark Dashboard")
+	fmt.Println(" Proof of Time - Benchmark Dashboard")
 	fmt.Println("======================================")
 
 	delays := []float64{5, 10, 30, 60}
 	results := []BenchmarkResult{}
 
 	for _, delay := range delays {
-		fmt.Printf("\n🔄 Testing %gs delay...\n", delay)
+		fmt.Printf("\nTesting %gs delay...\n", delay)
 		result := runBenchmark(delay)
 		results = append(results, result)
 
-		fmt.Printf("   ✅ Completed in %.2fs (%.1f%% accurate)\n",
+		fmt.Printf("    Completed in %.2fs (%.1f%% accurate)\n",
 			result.ActualDelay, result.Accuracy)
 	}
 

@@ -16,11 +16,11 @@ type TraceOutput struct {
 }
 
 func runVDF() {
-	fmt.Println("🕐 Proof of Time Travel - VDF with Time Binding")
+	fmt.Println(" Proof of Time Travel - VDF with Time Binding")
 	fmt.Println("================================================")
 
 	// Calibrate
-	fmt.Println("\n📊 Calibrating hardware...")
+	fmt.Println("\n Calibrating hardware...")
 	calibrateSteps := 10000
 	start := time.Now()
 
@@ -34,16 +34,16 @@ func runVDF() {
 	calibrateTime := time.Since(start)
 	stepsPerSecond := float64(calibrateSteps) / calibrateTime.Seconds()
 
-	fmt.Printf("✅ Your hardware: ~%.0f steps/second\n", stepsPerSecond)
+	fmt.Printf(" Your hardware: ~%.0f steps/second\n", stepsPerSecond)
 	fmt.Printf("   Calibration took: %.3f seconds\n", calibrateTime.Seconds())
 
 	// Target delay
 	targetSeconds := 30.0
 	totalSteps := int(stepsPerSecond * targetSeconds)
 
-	fmt.Printf("\n⏱️  Target delay: %.0f seconds\n", targetSeconds)
+	fmt.Printf("\n  Target delay: %.0f seconds\n", targetSeconds)
 	fmt.Printf("   Required steps: %d\n", totalSteps)
-	fmt.Println("\n🔄 Computing VDF...")
+	fmt.Println("\n Computing VDF...")
 
 	// Actual computation
 	start = time.Now()
@@ -62,7 +62,7 @@ func runVDF() {
 
 	actualTime := time.Since(start)
 
-	fmt.Printf("\n✅ VDF Complete!\n")
+	fmt.Printf("\n VDF Complete!\n")
 	fmt.Printf("   Actual time: %.2f seconds\n", actualTime.Seconds())
 	fmt.Printf("   Target time: %.2f seconds\n", targetSeconds)
 	fmt.Printf("   Accuracy: %.1f%%\n", (actualTime.Seconds()/targetSeconds)*100)

@@ -209,7 +209,7 @@ func VerifyWesolowskiProof(proof *ProofData) bool {
 	}
 
 	// Compute verification equation: B^(2^T) * x^r ≡ y (mod N)
-	// Step 1: Compute 2^T mod (N-1) using Carmichael's theorem
+	// Step 1: Compute 2^T mod (N-1) using Carmichael's theorem for efficiency
 	carmichaelLambda := new(big.Int).Sub(modulus, big.NewInt(1))
 	exp := new(big.Int)
 	exp.Exp(big.NewInt(2), big.NewInt(int64(proof.Public.Steps)), carmichaelLambda)
