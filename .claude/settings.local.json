@@ -1,0 +1,23 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(tree:*)",
+      "Bash(go mod tidy:*)",
+      "Bash(go build:*)",
+      "Bash(go clean:*)",
+      "Bash(go vet:*)",
+      "Bash(gofmt:*)",
+      "Bash(md5sum:*)",
+      "Bash(go version:*)",
+      "Bash(go env:*)",
+      "Bash(go list:*)",
+      "Bash(go fmt:*)",
+      "Bash(cat:*)",
+      "Bash(./proof-of-time help:*)",
+      "Bash(timeout 300 go run:*)",
+      "Bash(go run:*)"
+    ],
+    "deny": [],
+    "ask": []
+  }
+}
